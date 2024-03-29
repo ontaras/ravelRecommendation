@@ -1,113 +1,118 @@
 ul {
-    list-style-type: none;
-    padding: 10px;
-    overflow: hidden;
-    background-color: rgb(104, 204, 209);
+  list-style-type: none;
+  padding: 10px;
+  overflow: hidden;
+  background-color: rgb(104, 204, 209);
 }
 
 li {
-    float: inline-start;
+  float: inline-start;
 }
 
 li a {
-    display: inline-block;
-    color: white;
-    padding-top: 12px;
-    padding-left: 100px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+  color: white;
+  padding-top: 12px;
+  padding-left: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 li a:hover:not(.active) {
-    color: rgb(7, 101, 106);
+  color: rgb(7, 101, 106);
 }
 
 .searchBar {
-    float: right;
-    border-radius: 20px;
-    border: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  float: right;
+  border-radius: 20px;
+  border: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 input {
-    border: 0;
-    border-radius: 20px;
-    padding: 10px;
+  border: 0;
+  border-radius: 20px;
+  padding: 10px;
 }
 
-fieldset {
-    background-color: white;
-    border-radius: 45px;
-    border: 0;
+.old {
+  background-color: white;
+  border-radius: 45px;
+  border: 0;
 }
 
 button {
-    background-color:  rgb(104, 204, 209);
-    color: white;
-    border: 0;
-    padding: 7px 14px 7px 14px;
-    margin-left: 10px;
-    border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: rgb(104, 204, 209);
+  color: white;
+  border: 0;
+  padding: 7px 14px 7px 14px;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 button:hover:not(.active) {
-    color: rgb(4, 57, 60);
+  color: rgb(4, 57, 60);
 }
 
 body {
-    background-image: url(pics/kharkiv.png);
-    background-size: 100%;
+  background-image: url(pics/kharkiv.png);
+  background-size: 100%;
 }
 
 .vertical-line {
-    border-left: 2px solid whitesmoke;
-    height: 250px;
-    margin: 40px;
+  border-left: 2px solid whitesmoke;
+  height: 250px;
+  margin: 40px;
 }
 .dream {
-    color: white;
-    font-size: 80px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 110px;
-    margin-left: 50px;
-    width: 100px;
+  color: white;
+  font-size: 80px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 110px;
+  margin-left: 50px;
+  width: 100px;
 }
 
-.left div {
-    float: left;
-}
+/*.left div {
+  float: left;
+}*/
 
 .advert {
-    color: white;
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 40px;
-    margin-right: 600px;
-    line-height: 1.5;
+  color: white;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 40px;
+  margin-right: 60px;
+  line-height: 1.5;
 }
 
 .us {
-    color: white;
-    font-size: 80px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-top: 20px;
-    margin-left: 150px;
+  color: white;
+  font-size: 80px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20px;
+  margin-left: 150px;
 }
 .about {
-    color: white;
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-left: 180px;
-    margin-right: 180px;
-    line-height: 1.5;
+  color: white;
+  font-size: 18px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 180px;
+  margin-right: 180px;
+  line-height: 1.5;
 }
 
-table {
-    width: 80%;
-    color: white;
-    font-size: 80px;
-    align-items: center;
-    margin-left: 150px;
+.workers {
+  display: flex;
+  margin-left: 200px;
+}
+
+.new {
+  border: 1px;
+  background-color: aqua;
+  width: 250px;
+  height: 200px;
+  text-align: center;
 }
