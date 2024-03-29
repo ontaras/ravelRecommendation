@@ -1,27 +1,60 @@
-nav {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
+ul {
+    list-style-type: none;
     padding: 10px;
-    justify-content: flex-end;
+    overflow: hidden;
+    background-color: rgb(104, 204, 209);
 }
 
-nav ul {
-    list-style-type: none;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
+li {
+    float: inline-start;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    padding-top: 12px;
+    padding-left: 100px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    justify-content: baseline;
-  }
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li a:hover:not(.active) {
+    color: rgb(7, 101, 106);
+}
+
+.searchBar {
+    float: right;
+    border-radius: 20px;
+    border: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input {
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+fieldset {
+    background-color: white;
+    border-radius: 45px;
+    border: 0;
+}
+
+button {
+    background-color:  rgb(104, 204, 209);
+    color: white;
+    border: 0;
+    padding: 7px 14px 7px 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover:not(.active) {
+    color: rgb(4, 57, 60);
+}
 
 body {
     background-image: url(pics/kharkiv.png);

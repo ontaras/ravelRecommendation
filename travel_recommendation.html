@@ -1,7 +1,8 @@
 <!DOCtype html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Travel Recommendation</title>
         <link rel="stylesheet" href="./travel_recommendation.css">
     </head>
@@ -11,9 +12,14 @@
                 <li><a href="./travel_recommendation.html" id="home">Home</a></li>
                 <li><a href="./about_us.html" id="aboutUs">About Us</a></li>
                 <li><a href="./contact_us.html" id="contactUs">Contact Us</a></li>
-                <li><input type="text" id="keyword" placeholder="Enter a destination or keyword"></li>
-                <li><button id='btnSearch'>Search</button></li>
-                <li><button id='btnClear'>Clear</button></li>
+                <li class='searchBar'>
+                    <form>
+                        <fieldset>
+                            <input type="text" size='30' id="keyword" placeholder="  Enter a destination or keyword"> 
+                            <button id='btnSearch'>Search</button> <button id='btnClear'>Clear</button> 
+                        </fieldset>
+                    </form>
+                </li>
             </ul>   
         </nav>
         <div class="container"></div>
