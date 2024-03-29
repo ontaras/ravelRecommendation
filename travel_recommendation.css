@@ -60,3 +60,54 @@ body {
     background-image: url(pics/kharkiv.png);
     background-size: 100%;
 }
+
+.vertical-line {
+    border-left: 2px solid whitesmoke;
+    height: 250px;
+    margin: 40px;
+}
+.dream {
+    color: white;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 110px;
+    margin-left: 50px;
+    width: 100px;
+}
+
+.left div {
+    float: left;
+}
+
+.advert {
+    color: white;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 40px;
+    margin-right: 600px;
+    line-height: 1.5;
+}
+
+.us {
+    color: white;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.about {
+    color: white;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 180px;
+    margin-right: 180px;
+    line-height: 1.5;
+}
+
+table {
+    width: 80%;
+    color: white;
+    font-size: 80px;
+    align-items: center;
+    margin-left: 150px;
+}
