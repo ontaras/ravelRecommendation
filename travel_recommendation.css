@@ -35,7 +35,7 @@ ul {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
 
-  input {
+  .oval {
     border: 0;
     border-radius: 20px;
     padding: 10px;
@@ -157,3 +157,42 @@ ul {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     margin-top: 20%;
    }
+
+
+
+
+   #contactForm {
+    max-width: 900px;
+    margin-top: 200px;
+    margin-right: 50px
+  }
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    padding: 8px;
+    background: transparent;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+  }
+  #contactForm button {
+    padding: 10px 20px;
+    background-color: rgb(7, 101, 106);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 600px;
+  }
+  #contactForm button:hover {
+    background-color: rgb(104, 204, 209);
+  }
+
+  #contactForm label {
+    color: white;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 10px;
+  }
