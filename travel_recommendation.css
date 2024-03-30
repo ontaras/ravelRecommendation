@@ -120,10 +120,11 @@ body {
   margin-top: 30px;
   margin-right: 50px;
   width: 250px;
-  height: 200px;
+  height: 170px;
   text-align: center;
   color: aliceblue;
   border-radius: 30px;
+  font-size: large;
 }
 
 .team {
@@ -132,9 +133,32 @@ body {
     font-size: 50px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: aliceblue;
-    width: 100px;
+    width: 50px;
     padding-top: 0px;
     margin-right: 100px;
     text-align: left;
     border: 0px;
 }
+
+.backcolor {
+    background-color: rgb(156, 91, 217);
+    padding: 5px 30px;
+    margin: auto;
+    width: fit-content;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.contact {
+    color: white;
+  font-size: 80px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 50px;
+  margin-top: 20%;
+}
+
+.sidebar {
+    background: transparent;
+    box-sizing: border-box;
+    width: 20px;
+  }
