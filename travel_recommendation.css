@@ -1,7 +1,8 @@
 ul {
   list-style-type: none;
-  height: 52px;
-  padding: 3px;
+  display: flexbox;
+  height: 100%;
+  padding: 2px;
   overflow: hidden;
   background-color: rgb(104, 204, 209, 0.5);
   border-radius: 10px;
@@ -16,6 +17,7 @@ li a {
   color: white;
   padding-top: 12px;
   padding-left: 50px;
+  padding-bottom: 12px;
   text-decoration: none;
   font-size: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -109,6 +111,7 @@ body {
 .workers {
   display: flex;
   margin-left: 120px;
+  flex-wrap: wrap;
 }
 
 .new {
@@ -133,4 +136,5 @@ body {
     padding-top: 0px;
     margin-right: 100px;
     text-align: left;
+    border: 0px;
 }
