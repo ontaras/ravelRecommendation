@@ -206,3 +206,25 @@ ul {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: 10px;
   }
+
+  .result {
+    float: right;
+    max-width: 900px;
+    margin-top: 0px;
+    margin-right: 0.5%;
+    color: aliceblue;
+  }
+
+  .result fieldset {
+    border: 1px;
+    background-color: rgb(0, 0, 0, 0.4);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    width: 370px;
+    height: 350px;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 30px;
+    font-size: large;
+  }
