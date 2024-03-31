@@ -1,8 +1,6 @@
-const submitBtn = document.getElementById('submitBtn');
 const btnSearch = document.getElementById('btnSearch');
-const result = document.getElementById("result");
 
-function searchDestination(event) {
+function searchCondition(event) {
     event.preventDefault();
     const input = document.getElementById('keyword').value.toLowerCase();
     const resultDiv = document.getElementById('result');
@@ -11,20 +9,16 @@ function searchDestination(event) {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const countries = data.countries.find(item => item.name.toLowerCase() === input);
+        const country = data.countries.find(item => item.name.toLowerCase() === input);
 
-        if (countries) {
-            console.log('found');
-          /*const symptoms = condition.symptoms.join(', ');
+        console.log(JSON.stringify(country));
 
-          resultDiv.innerHTML += `<h2>${condition.name}</h2>`;
-          resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
-
-          resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
-          resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
-          resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;*/
+        if (country) {
+        resultDiv.innerHTML += `<fieldset>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</p></fieldset>`;
+        resultDiv.innerHTML += `<fieldset>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</p></fieldset>`;
+          //resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
         } else {
-          resultDiv.innerHTML = '<fieldset>Not found</fieldset>';
+          resultDiv.innerHTML = 'Condition not found.';
         }
       })
       .catch(error => {
@@ -32,32 +26,5 @@ function searchDestination(event) {
         resultDiv.innerHTML = 'An error occurred while fetching data.';
       });
   }
-  btnSearch.addEventListener('click', searchDestination);
 
-/*
-function thankyou(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value.toUpperCase();
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (name && email && message) {
-        document.getElementById('answer').innerHTML = `<p>THANKS, ${name},</p> 
-        <p>WE'll GET IN TOUCH!</p>`;
-    } else {
-        window.alert("Input correct values");
-    }
-   
-    resetForm();
-    console.log('thank you function performed');
-}
-
-function resetForm() {
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
-}
-
-submitBtn.addEventListener('click', thankyou);
-*/
+  btnSearch.addEventListener('click', searchCondition);
