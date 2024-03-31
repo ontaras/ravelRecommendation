@@ -24,7 +24,7 @@ function searchDestination(event) {
           resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
           resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;*/
         } else {
-          resultDiv.innerHTML = 'Condition not found.';
+          resultDiv.innerHTML = '<fieldset>Not found</fieldset>';
         }
       })
       .catch(error => {
