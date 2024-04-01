@@ -6,7 +6,7 @@ function thankyou(event) {
     const message = document.getElementById('message').value;
 
     if (name && email && message) {
-        document.getElementById('answer').innerHTML = `<p>THANKS, ${name},</p> 
+        document.getElementById('answer').innerHTML = `<p>THANKS, ${name},</p>
         <p>WE'll GET IN TOUCH!</p>`;
     } else {
     window.alert("Input correct values");
