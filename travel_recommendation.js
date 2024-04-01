@@ -11,19 +11,19 @@ function searchCondition(event) {
       .then(data => {
         const country = data.countries.find(item => item.name.toLowerCase() === input);
 
-        console.log(JSON.stringify(country));
+        // console.log(JSON.stringify(country));
+
 
         if (country) {
-        resultDiv.innerHTML += `<fieldset>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</p></fieldset>`;
-        resultDiv.innerHTML += `<fieldset>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</p></fieldset>`;
-          //resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
+          resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
+          resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
         } else {
-          resultDiv.innerHTML = 'Condition not found.';
+          resultDiv.innerHTML = `<fieldset style="height: 50px">Condition not found.</fieldset>`;
         }
       })
       .catch(error => {
         console.error('Error:', error);
-        resultDiv.innerHTML = 'An error occurred while fetching data.';
+        resultDiv.innerHTML = `<fieldset style="height: 50px">An error occurred while fetching data.</fieldset>`;
       });
   }
 
