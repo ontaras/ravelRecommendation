@@ -9,54 +9,36 @@ function searchCondition(event) {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        //const country = data.countries.find(item => item.name.toLowerCase() === input);
-
         if (input === 'australia' || input === 'brazil' || input === 'japan') {
 
             const country = data.countries.find(item => item.name.toLowerCase() === input);
-            //debugger;
-            
-            for (i in country) {
-                console.log(country[i]);
-                for (j in country[i]) {
-                    console.log(country[i]['id'] + country[i]['name'] + country[i][j]['name']);
+            const cities = country.cities;
+            for (i in cities) {
+                // console.log(country.cities[i]);
+                for (j in cities[i]) {
+                    // console.log(cities[i]['name'] + ', ' + cities[i]['description']);
+                    resultDiv.innerHTML += `<fieldset><img src="${cities[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${cities[i]['name']}<p>${cities[i]['description']}<p></fieldset>`;
+                    break;
                 }
-            }
-            
-        
-                
-            
-
-            // for (i in country) {
-            //     console.log(country[i]);
-            //     for (j in country[i]) {
-            //         console.log(country[i]['name'] + country[i]['cities']);
-            //         for (k in country[i][j]) {
-            //             console.log(country[i][j]['name'] + ', ' + country[i][j]['description']+ ', ' + country[i][j]['imageUrl']);
-            //             //resultDiv.innerHTML += `<fieldset>${country[i][j]['name']}<p>${country[i][j]['description']}<p>${country[i][j]['imageUrl']}</fieldset>`;
-            //             break;
-            //         }
-
-            //     }
-            // }
-            // resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
-            // resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
+            }   
 
         } else if (input === 'beach' || input === 'beaches') {
             const beaches = data.beaches;
             for (i in beaches) {
-                console.log(beaches[i]);
-                for (n in beaches[i]) {
-                    console.log(beaches[i]['name'] + ', ' + beaches[i]['description']);
-                    resultDiv.innerHTML += `<fieldset>${beaches[i]['name']}</fieldset>`;
+                for (j in beaches[i]) {
+                    resultDiv.innerHTML += `<fieldset><fieldset><img src="${beaches[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${beaches[i]['name']}<p>${beaches[i]['description']}<p></fieldset>`;
+                    break;
+                }
+            } 
+        } else if (input === 'temples' || input === 'temple') {
+            const temples = data.temples;
+            for (i in temples) {
+                for (j in temples[i]) {
+                    resultDiv.innerHTML += `<fieldset><fieldset><img src="${temples[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${temples[i]['name']}<p>${temples[i]['description']}<p></fieldset>`;
                     break;
                 }
             }
-            
-            //resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
-            //resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
-        }
-         else {
+        } else {
           resultDiv.innerHTML = `<fieldset style="height: 50px">destination or keyword not found.</fieldset>`;
         }
       })
