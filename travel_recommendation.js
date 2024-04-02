@@ -9,16 +9,26 @@ function searchCondition(event) {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        const country = data.countries.find(item => item.name.toLowerCase() === input);
+        //const country = data.countries.find(item => item.name.toLowerCase() === input);
 
-        // console.log(JSON.stringify(country));
-
-
-        if (country) {
-          resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
-          resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
-        } else {
-          resultDiv.innerHTML = `<fieldset style="height: 50px">Condition not found.</fieldset>`;
+        if (input === 'australia' || input === 'brazil' || input === 'japan') {
+            const country = data.countries.find(item => item.name.toLowerCase() === input);
+            resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
+            resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
+        } else if (input === 'beach' || input === 'beaches') {
+            const beaches = data.beaches;
+            for (i in beaches) {
+                console.log(beaches[i]);
+                for (n in beaches[i]) {
+                    console.log(beaches[i]['name'] + ', ' + beaches[i]['description']);
+                }
+            }
+            
+            //resultDiv.innerHTML += `<fieldset><img src="${country['cities'][0]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][0]['name']}<p>${country['cities'][0]['description']}</fieldset>`;
+            //resultDiv.innerHTML += `<fieldset><img src="${country['cities'][1]['imageUrl']}" style='width:500px; height:250px;'><p>${country['cities'][1]['name']}<p>${country['cities'][1]['description']}</fieldset>`;
+        }
+         else {
+          resultDiv.innerHTML = `<fieldset style="height: 50px">destination or keyword not found.</fieldset>`;
         }
       })
       .catch(error => {
