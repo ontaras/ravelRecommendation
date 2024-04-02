@@ -10,18 +10,23 @@ function searchCondition(event) {
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
       .then(data => {
-        if (input === 'australia' || input === 'brazil' || input === 'japan') {
-            debugger;
-            const country = data.countries.find(item => item.name.toLowerCase() === input);
-            const cities = country.cities;
-            for (i in cities) {
-                // console.log(country.cities[i]);
-                for (j in cities[i]) {
-                    // console.log(cities[i]['name'] + ', ' + cities[i]['description']);
-                    resultDiv.innerHTML += `<fieldset><img src="${cities[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${cities[i]['name']}<p>${cities[i]['description']}<p></fieldset>`;
+        if (input === 'country' || input === 'countries') {
+            
+            const country = data.countries;
+            const cities = [];
+            for (i in country) {
+                for (j in country[i]) {
+                    cities.push(country[i]['cities']);
                     break;
                 }
-            }   
+            }
+            
+            for (i in cities) {
+                for (j in cities[i]) {
+                    console.log(cities[i][j]['name']);
+                    resultDiv.innerHTML += `<fieldset><img src="${cities[i][j]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${cities[i][j]['name']}<p>${cities[i][j]['description']}<p></fieldset>`;
+                }
+            }  
         } else if (input === 'beach' || input === 'beaches') {
             const beaches = data.beaches;
             for (i in beaches) {
