@@ -1,4 +1,5 @@
 const btnSearch = document.getElementById('btnSearch');
+const btnClear = document.getElementById('btnClear');
 
 function searchCondition(event) {
     event.preventDefault();
@@ -10,7 +11,7 @@ function searchCondition(event) {
       .then(response => response.json())
       .then(data => {
         if (input === 'australia' || input === 'brazil' || input === 'japan') {
-
+            debugger;
             const country = data.countries.find(item => item.name.toLowerCase() === input);
             const cities = country.cities;
             for (i in cities) {
@@ -46,5 +47,13 @@ function searchCondition(event) {
         resultDiv.innerHTML = `<fieldset style="height: 50px">An error occurred while fetching data.</fieldset>`;
       });
   }
+  
+  function clearResult(event) {
+    event.preventDefault();
+    document.getElementById('keyword').value = '';
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+  }
 
   btnSearch.addEventListener('click', searchCondition);
+  btnClear.addEventListener('click', clearResult);
