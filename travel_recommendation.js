@@ -21,12 +21,11 @@ function searchCondition(event) {
                     break;
                 }
             }   
-
         } else if (input === 'beach' || input === 'beaches') {
             const beaches = data.beaches;
             for (i in beaches) {
                 for (j in beaches[i]) {
-                    resultDiv.innerHTML += `<fieldset><fieldset><img src="${beaches[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${beaches[i]['name']}<p>${beaches[i]['description']}<p></fieldset>`;
+                    resultDiv.innerHTML += `<fieldset><img src="${beaches[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${beaches[i]['name']}<p>${beaches[i]['description']}<p></fieldset>`;
                     break;
                 }
             } 
@@ -34,7 +33,7 @@ function searchCondition(event) {
             const temples = data.temples;
             for (i in temples) {
                 for (j in temples[i]) {
-                    resultDiv.innerHTML += `<fieldset><fieldset><img src="${temples[i]['imageUrl']}" style='width:500px; height:250px; margin-bottom: 10px;'<p>${temples[i]['name']}<p>${temples[i]['description']}<p></fieldset>`;
+                    resultDiv.innerHTML += `<fieldset><img src="${temples[i]['imageUrl']}" style='width:500px; height:250px;margin-bottom: 10px;'<p>${temples[i]['name']}<p>${temples[i]['description']}<p></fieldset>`;
                     break;
                 }
             }
